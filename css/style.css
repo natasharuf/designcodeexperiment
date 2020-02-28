@@ -1,0 +1,207 @@
+/*
+	Weight axis: 100 – 700
+	Width axis: 85 – 100
+*/
+@font-face {
+	font-family: "IBM Plex Sans Roman";
+	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf");
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "IBM Plex Sans Roman", Times;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+}
+
+h1 {
+	font-weight: 100;
+	font-size: 10vw;
+	line-height: 10vw;
+	color: white;
+	margin: 0;
+	padding: 0;
+	font-variation-settings: 'wght' 100, 'wdth' 85;
+}
+
+h1 .char {
+	--delay: calc((var(--char-index) + 1) * 400ms);
+	animation: breathe 4000ms infinite both;
+	animation-delay: var(--delay);
+}
+
+h1:hover span {
+	animation-play-state: paused;
+}
+
+@keyframes breathe {
+	0% {
+		font-variation-settings: 'wght' 100, 'wdth' 85;
+		font-size: 10vw;
+	}
+	60% {
+		font-variation-settings: 'wght' 700, 'wdth' 100;
+		font-size: 11vw;
+	}
+
+	100% {
+		font-variation-settings: 'wght' 100, 'wdth' 85;
+		font-size: 10vw;
+	}
+}
+
+
+
+/* allgemein */
+
+html,body{
+	width:100%;
+	height:100%;
+	background-color: black;
+
+	font-family: "IBM Plex Sans Roman", Times;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+	min-height: 100vh;
+}
+
+b {
+	font-weight: 800;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 10vw;
+	line-height: 3vw;
+	color: #DCEDC8;
+	margin: 0;
+	padding: 0;
+	font-variation-settings: 'wght' 100, 'wdth' 85;
+}
+
+h2 .char {
+	/*--delay: calc((var(--char-index) + 1 ) * 600ms);*/
+	animation: breathe 3000ms infinite both;
+	animation-delay: var(--delay);
+}
+
+h3 {
+	font-weight: 700;
+	/*font-size: 10vw;*/
+	line-height: 3vw;
+	color: #DCEDC8;
+	margin: 0;
+	padding: 0;
+
+}
+
+h4 {
+	font-weight: 100;
+	font-size: 4.5vw;
+	line-height: 3vw;
+	color: #eac1c1;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	transform: rotate(-90deg);
+}
+
+
+h5-zurich {
+	font-weight: 700;
+	font-size: 4.5vw;
+	line-height: 5vw;
+	color: transparent;
+	margin: 0;
+	padding: 0;
+	background: url("Flag_of_Canton_of_Zürich.svg.png") 20% 50% / cover;
+	background-clip: text;
+	background-position: center;
+	transform: rotate(30deg);
+
+}
+
+
+/*
+background: linear-gradient(170deg, #ffffff 0%,#ffffff 50%,#0560ff 51%,#0560ff 100%);
+*/
+
+/* Grid */
+
+.wrapper {
+	width: 100%;
+	height: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-gap: 10px;  */
+  /* grid-auto-rows: minmax(100px, auto); */
+	position: absolute;
+	top: 30vh;
+	left: 0;
+	right: 20;
+}
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.two_middle {
+  grid-column: 2 / 4;
+  grid-row: 3 / 3;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+}
+.five-1 {
+  grid-column: 2;
+  grid-row: 5;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.five-2 {
+  grid-column: 2;
+  grid-row: 6;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.five-3 {
+  grid-column: 2;
+  grid-row: 7;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+.six {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.seven {
+	grid-column: 1 / 3;
+	grid-row: 5;
+}
