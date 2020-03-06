@@ -42,13 +42,20 @@ a {
 	  color: inherit;
 	  text-decoration: none;
 	  display: inline-block;
-	  transform: rotate(180deg);
-	  writing-mode: vertical-rl;
-	  text-orientation: mixed;
+	  /*transform: rotate(180deg);*/
+	  /*writing-mode: vertical-rl;*/
+	  /*text-orientation: mixed;*/
 	}
 
-a:hover {
-  color: white;
+	a:hover, a:link {
+	  color: white;
+	}
+
+a.hey {
+	display: inline-block;
+	transform: rotate(180deg);
+ 	writing-mode: vertical-rl;
+ 	text-orientation: mixed;
 }
 
 div.container {
@@ -327,6 +334,7 @@ background: linear-gradient(170deg, #ffffff 0%,#ffffff 50%,#0560ff 51%,#0560ff 1
   margin: 0 auto 10px;
   transition: transform 0.4s ease;
 }
+
 
 /*.menu:hover .bar {*/
 /*  transform: rotate(-10deg);*/
