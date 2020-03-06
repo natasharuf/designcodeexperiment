@@ -36,6 +36,23 @@ body {
 
 a {
 	cursor: crosshair;
+	  padding: -10px;
+		margin: 0;
+		font-size: 2.5vw;
+	  color: inherit;
+	  text-decoration: none;
+	  display: inline-block;
+	  transform: rotate(180deg);
+	  writing-mode: vertical-rl;
+	  text-orientation: mixed;
+	}
+
+a:hover {
+  color: white;
+}
+
+div.container {
+	line-height: 20px;
 }
 
 h1 {
